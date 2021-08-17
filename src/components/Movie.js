@@ -15,8 +15,11 @@ class Movie extends React.Component {
     }
 
     render() {
+
+        let classList = (this.state.numberOfLikes >= 5) ? " movie-popular" : "";
+
         return (
-            <section className="movie">
+            <section className={"movie " + classList}>
                 <h5>{this.props.title}</h5>
 
                 <p>Number of likes: {this.state.numberOfLikes}</p>

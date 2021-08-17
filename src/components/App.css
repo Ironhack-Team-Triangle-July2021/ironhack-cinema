@@ -8,3 +8,7 @@
   margin: 1rem auto;
   width: 60%;
 }
+
+.movie.movie-popular {
+  background-color: greenyellow;
+}

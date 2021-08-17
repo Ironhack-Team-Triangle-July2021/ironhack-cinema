@@ -27,3 +27,8 @@ An ongoing project / codealong to learn React fundamentals.
 - Using State in Class components
 - Setting up a counter for the Movie component
 
+
+### Step 3: ES6 Modules []
+
+- Extract components to different files, using ES6 Modules
+

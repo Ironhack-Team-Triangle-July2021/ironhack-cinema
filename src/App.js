@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 function Header(){
   return <h1>Welcome to IronHack Cinema</h1>
@@ -18,12 +19,32 @@ function Main(){
   )
 }
 
-function Movie(props){
-  return (
-    <section className="movie">
-      <h5>{props.title}</h5>
-    </section>
-  )
+class Movie extends React.Component{
+  
+  constructor(props){
+    super(props);
+    this.state = {
+      likes: 0
+    }
+  }
+
+  increaseLikes = () => {
+    this.setState( state => {
+      return {
+        likes: state.likes + 1
+      }
+    });
+  }
+
+  render(){
+    return (
+      <section className="movie">
+        <h5>{this.props.title}</h5>
+        <p>Number of likes: {this.state.likes}</p>
+        <button onClick={this.increaseLikes}>Like it!</button>
+      </section>
+    );
+  }
 }
 
 function Footer(){

@@ -16,10 +16,13 @@ class Movie extends React.Component {
 
     render() {
 
-        let classList = (this.state.numberOfLikes >= 5) ? " movie-popular" : "";
+        const styleObj = {
+            color: "#333",
+            backgroundColor: (this.state.numberOfLikes > 4) ? "greenyellow" : "#fff"
+        };
 
         return (
-            <section className={"movie " + classList}>
+            <section className="movie" style={ styleObj }>
                 <h5>{this.props.title}</h5>
 
                 <p>Number of likes: {this.state.numberOfLikes}</p>

@@ -32,3 +32,10 @@ An ongoing project / codealong to learn React fundamentals.
 
 - Extract components to different files, using ES6 Modules
 
+
+
+### Step 4: Styling []
+
+- 4.a: using variable className
+- 4.b: using inline style
+

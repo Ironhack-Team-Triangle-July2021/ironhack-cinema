@@ -27,8 +27,9 @@ class Movie extends React.Component {
 
                 <img src={this.props.imgURL} alt={this.props.title} />
 
-                { this.props.rating > 7 && 
-                  <p className="banner">POPULAR</p> 
+                { this.props.rating > 7
+                  ? <p className="banner banner-popular">POPULAR</p>
+                  : <p className="banner banner-average">AVERAGE</p>
                 }
 
                 <p>Year: {this.props.year}</p>

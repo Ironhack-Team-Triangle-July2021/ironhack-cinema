@@ -15,8 +15,13 @@
 }
 
 .banner {
-  background-color: rgb(163, 17, 182);
   color: #fff;
   font-weight: bold;
   padding: 5px 0;
+}
+.banner.banner-popular {
+  background-color: rgb(163, 17, 182);
+}
+.banner.banner-average {
+  background-color: rgb(59, 52, 59);
 }

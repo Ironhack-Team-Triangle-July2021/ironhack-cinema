@@ -41,6 +41,8 @@ An ongoing project / codealong to learn React fundamentals.
 
 
 ### Step 5: Lists & keys []
-- 5.a: loading the list of movies from an array with `moviesArr.map()`
+- Loading the list of movies from an array with `moviesArr.map()`
 
 
+### Step 6: JSX Spread Attributes []
+- Pass props using JSX Spread Attributes

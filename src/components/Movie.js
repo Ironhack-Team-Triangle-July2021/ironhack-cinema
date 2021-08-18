@@ -24,7 +24,11 @@ class Movie extends React.Component {
         return (
             <section className="movie" style={ styleObj }>
                 <h5>{this.props.title}</h5>
+
+                <img src={this.props.imgURL} alt={this.props.title} />
+
                 <p>Year: {this.props.year}</p>
+                <p>Rating: {this.props.rating}</p>
 
                 <p>Number of likes: {this.state.numberOfLikes}</p>
                 <button onClick={this.increaseLikes}>Likes</button>

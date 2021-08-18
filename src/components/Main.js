@@ -8,8 +8,8 @@ class Main extends React.Component {
         moviesArr: movies
     }
 
-    doSomething = () => {
-        console.log("I am executing code in the parent component.... so cool!!");
+    deleteMovie = (movieId) => {
+        console.log(movieId)
     }
 
     render() {
@@ -17,7 +17,13 @@ class Main extends React.Component {
             <main className="movie-container">
                 {
                     this.state.moviesArr.map(movieObj => {
-                        return <Movie key={movieObj.id} {...movieObj} methodInTheParentComponent={this.doSomething} />
+                        return (
+                            <Movie 
+                                key={movieObj.id} 
+                                {...movieObj} 
+                                methodToDeleteMovie={ () => { this.deleteMovie(movieObj.id) }} 
+                            />
+                        )
                     })
                 }
             </main>

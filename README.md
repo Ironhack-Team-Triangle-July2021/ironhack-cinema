@@ -39,3 +39,8 @@ An ongoing project / codealong to learn React fundamentals.
 - 4.a: using variable className
 - 4.b: using inline style
 
+
+### Step 5: Lists & keys []
+- 5.a: loading the list of movies from an array with `moviesArr.map()`
+
+

@@ -24,6 +24,7 @@ class Movie extends React.Component {
         return (
             <section className="movie" style={ styleObj }>
                 <h5>{this.props.title}</h5>
+                <p>Year: {this.props.year}</p>
 
                 <p>Number of likes: {this.state.numberOfLikes}</p>
                 <button onClick={this.increaseLikes}>Likes</button>

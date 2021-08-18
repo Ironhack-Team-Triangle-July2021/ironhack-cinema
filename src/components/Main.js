@@ -1,5 +1,13 @@
 import Movie from "./Movie";
 
+
+function renderMovies() {
+    return moviesArr.map( movieObj => {
+        return <Movie key={movieObj.id} {...movieObj} />
+    });
+}
+
+
 function Main() {
 
     const moviesArr = [
@@ -80,9 +88,7 @@ function Main() {
 
     return (
         <main>
-            { moviesArr.map( movieObj => {
-                return <Movie key={movieObj.id} {...movieObj} />
-            })}
+            { renderMovies() }
         </main>
     )
 }

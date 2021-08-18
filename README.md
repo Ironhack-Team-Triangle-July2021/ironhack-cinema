@@ -46,3 +46,7 @@ An ongoing project / codealong to learn React fundamentals.
 
 ### Step 6: JSX Spread Attributes []
 - Pass props using JSX Spread Attributes
+
+
+### Step 7: Extract code to a specific function []
+- Extract code to a specific function in charge of rendering the list of movies

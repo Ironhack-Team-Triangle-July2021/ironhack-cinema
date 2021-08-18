@@ -62,3 +62,7 @@ An ongoing project / codealong to learn React fundamentals.
 - 9.c: Passing the id of the movie when we invoke the method in the parent component
 - 9.d: Updating state with the new list of movies
 - 9.e: Updating state with an updater function (instead of an object)
+
+
+### Step 10: Conditional rendering
+- 10.a: Conditional rendering storing JSX in a variable

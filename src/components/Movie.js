@@ -21,11 +21,20 @@ class Movie extends React.Component {
             backgroundColor: (this.state.numberOfLikes > 4) ? "greenyellow" : "#fff"
         };
 
+        let popularBanner;
+        if( this.props.rating > 7 ){
+            popularBanner = <p className="banner">POPULAR</p>;
+        } else {
+            popularBanner = "";
+        }
+
         return (
             <section className="movie" style={ styleObj }>
                 <h5>{this.props.title}</h5>
 
                 <img src={this.props.imgURL} alt={this.props.title} />
+
+                { popularBanner }
 
                 <p>Year: {this.props.year}</p>
                 <p>Rating: {this.props.rating}</p>

@@ -60,3 +60,4 @@ An ongoing project / codealong to learn React fundamentals.
 - 9.a: Store the list of movies in State
 - 9.b: Calling a method in the parent component from a child component
 - 9.c: Passing the id of the movie when we invoke the method in the parent component
+- 9.d: Updating state with the new list of movies

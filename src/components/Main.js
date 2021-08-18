@@ -9,7 +9,13 @@ class Main extends React.Component {
     }
 
     deleteMovie = (movieId) => {
-        console.log(movieId)
+        const newMoviesArr = this.state.moviesArr.filter( movie => {
+            return movie.id !== movieId;
+        });
+
+        this.setState({
+            moviesArr: newMoviesArr
+        });
     }
 
     render() {

@@ -50,3 +50,8 @@ An ongoing project / codealong to learn React fundamentals.
 
 ### Step 7: Extract code to a specific function []
 - Extract code to a specific function in charge of rendering the list of movies
+
+
+### Step 8: Import data from a json file []
+- Extract the data to a json file & import it
+

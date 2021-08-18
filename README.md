@@ -68,3 +68,4 @@ An ongoing project / codealong to learn React fundamentals.
 - 10.a: Conditional rendering storing JSX in a variable
 - 10.b: Conditional rendering with the logical AND operator
 - 10.c: Conditional rendering with the ternary operator
+- 10.d: Use conditional rendering to display msg if there are no movies available

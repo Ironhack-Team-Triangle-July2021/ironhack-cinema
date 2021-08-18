@@ -2,9 +2,16 @@
   text-align: center;
 }
 
+.msg-info {
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #bbb;
+}
+
 .movie-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie {

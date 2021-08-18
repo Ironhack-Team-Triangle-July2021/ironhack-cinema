@@ -9,26 +9,32 @@ class Main extends React.Component {
     }
 
     deleteMovie = (movieId) => {
-        this.setState( prevState => {
+        this.setState(prevState => {
             return {
-                moviesArr: prevState.moviesArr.filter( movie => movie.id !== movieId )
+                moviesArr: prevState.moviesArr.filter(movie => movie.id !== movieId)
             }
         });
+    }
+
+    renderMovies() {
+        return this.state.moviesArr.map(movieObj => {
+            return (
+                <Movie
+                    key={movieObj.id}
+                    {...movieObj}
+                    methodToDeleteMovie={() => { this.deleteMovie(movieObj.id) }}
+                />
+            )
+        })
     }
 
     render() {
         return (
             <main className="movie-container">
                 {
-                    this.state.moviesArr.map(movieObj => {
-                        return (
-                            <Movie 
-                                key={movieObj.id} 
-                                {...movieObj} 
-                                methodToDeleteMovie={ () => { this.deleteMovie(movieObj.id) }} 
-                            />
-                        )
-                    })
+                    this.state.moviesArr.length
+                        ? this.renderMovies()
+                        : <p className="msg-info">There are currently no movies to display</p>
                 }
             </main>
         );

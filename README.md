@@ -66,3 +66,4 @@ An ongoing project / codealong to learn React fundamentals.
 
 ### Step 10: Conditional rendering
 - 10.a: Conditional rendering storing JSX in a variable
+- 10.b: Conditional rendering with the logical AND operator

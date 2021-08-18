@@ -1,20 +1,27 @@
+import React from "react";
 import Movie from "./Movie";
-import moviesArr from '../data/movies.json';
+import movies from '../data/movies.json';
 
+class Main extends React.Component {
 
-function renderMovies() {
-    return moviesArr.map( movieObj => {
-        return <Movie key={movieObj.id} {...movieObj} />
-    });
-}
+    state = {
+        moviesArr: movies
+    }
 
+    renderMovies = () => {
+        return this.state.moviesArr.map(movieObj => {
+            return <Movie key={movieObj.id} {...movieObj} />
+        });
+    }   
 
-function Main() {
-    return (
-        <main>
-            { renderMovies() }
-        </main>
-    )
+    render() {
+        return (
+            <main className="movie-container">
+                {this.renderMovies()}
+            </main>
+        );
+    }
+
 }
 
 export default Main;

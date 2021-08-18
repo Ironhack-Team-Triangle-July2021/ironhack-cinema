@@ -2,9 +2,14 @@
   text-align: center;
 }
 
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .movie {
-  border: 1px solid #bbb;
-  padding: 1rem;
-  margin: 1rem auto;
-  width: 60%;
+  outline: 1px solid #bbb;
+  padding: 0.5rem;
+  margin: 2.5% auto;
+  flex: 0 1 20%;
 }

@@ -8,16 +8,18 @@ class Main extends React.Component {
         moviesArr: movies
     }
 
-    renderMovies = () => {
-        return this.state.moviesArr.map(movieObj => {
-            return <Movie key={movieObj.id} {...movieObj} />
-        });
-    }   
+    doSomething = () => {
+        console.log("I am executing code in the parent component.... so cool!!");
+    }
 
     render() {
         return (
             <main className="movie-container">
-                {this.renderMovies()}
+                {
+                    this.state.moviesArr.map(movieObj => {
+                        return <Movie key={movieObj.id} {...movieObj} methodInTheParentComponent={this.doSomething} />
+                    })
+                }
             </main>
         );
     }

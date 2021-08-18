@@ -30,8 +30,13 @@ class Movie extends React.Component {
                 <p>Year: {this.props.year}</p>
                 <p>Rating: {this.props.rating}</p>
 
-                <p>Number of likes: {this.state.numberOfLikes}</p>
-                <button onClick={this.increaseLikes}>Likes</button>
+                <p>
+                    Number of likes: {this.state.numberOfLikes}
+                    &nbsp;
+                    <button onClick={this.increaseLikes}> +1 </button>
+                </p>
+                
+                <button onClick={ this.props.methodInTheParentComponent }>Delete</button>
             </section>
         )
     }

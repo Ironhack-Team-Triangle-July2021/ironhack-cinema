@@ -57,3 +57,4 @@ An ongoing project / codealong to learn React fundamentals.
 
 ### Step 9: Dynamic list of movies []
 - 9.a: Store the list of movies in State
+- 9.b: Calling a method in the parent component from a child component

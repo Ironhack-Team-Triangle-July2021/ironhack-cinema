@@ -17,6 +17,15 @@ class Main extends React.Component {
         });
     }
 
+
+    createMovie = (movieData) => {
+        this.setState( prevState => {
+            return {
+                moviesArr: [...prevState.moviesArr, movieData]
+            }
+        });
+    }
+
     renderMovies() {
         return this.state.moviesArr.map(movieObj => {
             return (
@@ -32,7 +41,7 @@ class Main extends React.Component {
     render() {
         return (
             <main>
-                <AddMovie />
+                <AddMovie addMovieHandler={this.createMovie} />
                 <section className="movie-container">
                     {
                         this.state.moviesArr.length

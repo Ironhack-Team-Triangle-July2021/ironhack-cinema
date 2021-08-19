@@ -1,4 +1,5 @@
 import React from "react";
+import AddMovie from "./AddMovie";
 import Movie from "./Movie";
 import movies from '../data/movies.json';
 
@@ -30,12 +31,15 @@ class Main extends React.Component {
 
     render() {
         return (
-            <main className="movie-container">
-                {
-                    this.state.moviesArr.length
-                        ? this.renderMovies()
-                        : <p className="msg-info">There are currently no movies to display</p>
-                }
+            <main>
+                <AddMovie />
+                <section className="movie-container">
+                    {
+                        this.state.moviesArr.length
+                            ? this.renderMovies()
+                            : <p className="msg-info">There are currently no movies to display</p>
+                    }
+                </section>
             </main>
         );
     }

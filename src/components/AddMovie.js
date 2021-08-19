@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 class AddMovie extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             title: '',
+            year: '',
+            rating: '',
+            imgURL: '',
         }
     }
 
-    handleTitleChange = (event) => {
+    handleInputChange = (event) => {
         this.setState({
-            title: event.target.value
+            [event.target.name]: event.target.value
         });
     }
 
@@ -18,13 +21,52 @@ class AddMovie extends Component {
         return (
             <section>
                 <form>
+
+                    {/* Input field: Title */}
                     <label>
                         Title:
-                        <input 
-                            type="text" 
-                            name="title" 
+                        <input
+                            type="text"
+                            name="title"
                             value={this.state.title}
-                            onChange={ (e) => this.handleTitleChange(e) }
+                            onChange={(e) => this.handleInputChange(e)}
+                        />
+                    </label>
+
+                    {/* Input field: Year */}
+                    <label>
+                        Year:
+                        <input
+                            type="number"
+                            min="1900"
+                            max="2099"
+                            name="year"
+                            value={this.state.year}
+                            onChange={(e) => this.handleInputChange(e)}
+                        />
+                    </label>
+
+                    {/* Input field: Rating */}
+                    <label>
+                        Rating:
+                        <input
+                            type="number"
+                            min="1"
+                            max="10"
+                            name="rating"
+                            value={this.state.rating}
+                            onChange={(e) => this.handleInputChange(e)}
+                        />
+                    </label>
+
+                    {/* Input field: imgURL */}
+                    <label>
+                        Image URL:
+                        <input
+                            type="text"
+                            name="imgURL"
+                            value={this.state.imgURL}
+                            onChange={(e) => this.handleInputChange(e)}
                         />
                     </label>
 

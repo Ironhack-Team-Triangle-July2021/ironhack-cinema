@@ -20,7 +20,17 @@ class AddMovie extends Component {
     handleFormSubmit = (event) => {
         event.preventDefault();
         const { title, year, rating, imgURL } = this.state;
-        this.props.addMovieHandler( {title, year, rating, imgURL} ); // invoke method in parent component, passing an object with the details of the new movie
+        
+        // call a method in parent component to create the new movie (we're passing an object with the details of the new movie)
+        this.props.addMovieHandler( {title, year, rating, imgURL} ); 
+
+        // reset form
+        this.setState({
+            title: '',
+            year: '',
+            rating: '',
+            imgURL: '',
+        });
     }
 
     render() {

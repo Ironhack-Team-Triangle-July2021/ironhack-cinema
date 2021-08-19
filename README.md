@@ -80,7 +80,7 @@ An ongoing project / codealong to learn React fundamentals.
   - When we render <AddMovie />, pass a reference to that method through props
   - When the user submits the form, invoke that method of the parent component (and pass the information about the new movie)
   - In createMovie(), update state (adding the new movie to state.moviesArr)
-
+- 11.d: Reset the form after submit
 
 > Creating React forms:
 >

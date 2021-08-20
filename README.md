@@ -120,3 +120,6 @@ An ongoing project / codealong to learn React fundamentals.
 - 12.a: Add a new component `<Summary />` that needs access to the list of movies (we need to lift state up to the `<Main />` component, which is the closest common ancestor).
   - Note: at this point, functionality to delete and add movies doesn't work.
 
+- 12.b: Functionality to delete Movie
+
+

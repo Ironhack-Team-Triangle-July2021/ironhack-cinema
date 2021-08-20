@@ -6,7 +6,7 @@ function Summary(props) {
     const averageRating = totalRating / props.listOfMovies.length;
 
     return (
-        <div id="summary" class="msg-info">
+        <div id="summary" className="msg-info">
             <p>
                 Number of movies: {props.listOfMovies.length} <br />
                 Average Rating: { averageRating }

@@ -41,7 +41,7 @@ class Movie extends React.Component {
                     <button onClick={this.increaseLikes}> +1 </button>
                 </p>
                 
-                <button onClick={ this.props.methodToDeleteMovie }>Delete</button>
+                <button onClick={ () => this.props.methodToDeleteMovie(this.props.id) }>Delete</button>
             </section>
         )
     }

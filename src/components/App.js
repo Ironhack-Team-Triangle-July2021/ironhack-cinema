@@ -11,12 +11,21 @@ class App extends React.Component {
   state = {
     moviesArr: movies
   }
+
+  deleteMovie = (movieId) => {
+    this.setState(prevState => {
+        return {
+            moviesArr: prevState.moviesArr.filter(movie => movie.id !== movieId)
+        }
+    });
+  }
+
   render(){
     return (
       <div className="App">
         <Header />
         <Summary listOfMovies={this.state.moviesArr} />
-        <Main listOfMovies={this.state.moviesArr} />
+        <Main listOfMovies={this.state.moviesArr} methodToDeleteMovie={this.deleteMovie} />
         <Footer />
       </div>
     );

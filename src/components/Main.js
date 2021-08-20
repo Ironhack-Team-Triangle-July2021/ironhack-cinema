@@ -4,15 +4,6 @@ import Movie from "./Movie";
 
 class Main extends React.Component {
 
-    deleteMovie = (movieId) => {
-        this.setState(prevState => {
-            return {
-                moviesArr: prevState.moviesArr.filter(movie => movie.id !== movieId)
-            }
-        });
-    }
-
-
     createMovie = (movieData) => {
         this.setState( prevState => {
             return {
@@ -27,7 +18,7 @@ class Main extends React.Component {
                 <Movie
                     key={movieObj.id}
                     {...movieObj}
-                    methodToDeleteMovie={() => { this.deleteMovie(movieObj.id) }}
+                    methodToDeleteMovie={ this.props.methodToDeleteMovie }
                 />
             )
         })

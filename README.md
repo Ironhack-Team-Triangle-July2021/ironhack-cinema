@@ -122,5 +122,6 @@ An ongoing project / codealong to learn React fundamentals.
 
 - 12.b: Functionality to delete Movie
 - 12.c: Functionality to delete Movie
+- 12.d: Fix average rating
 
 

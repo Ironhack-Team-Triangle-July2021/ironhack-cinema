@@ -4,14 +4,6 @@ import Movie from "./Movie";
 
 class Main extends React.Component {
 
-    createMovie = (movieData) => {
-        this.setState( prevState => {
-            return {
-                moviesArr: [...prevState.moviesArr, movieData]
-            }
-        });
-    }
-
     renderMovies() {
         return this.props.listOfMovies.map(movieObj => {
             return (
@@ -27,7 +19,7 @@ class Main extends React.Component {
     render() {
         return (
             <main>
-                <AddMovie addMovieHandler={this.createMovie} />
+                <AddMovie methodToCreateMovie={this.props.methodToCreateMovie} />
                 <section className="movie-container">
                     {
                         this.props.listOfMovies.length

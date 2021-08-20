@@ -22,7 +22,7 @@ class AddMovie extends Component {
         const { title, year, rating, imgURL } = this.state;
         
         // call a method in parent component to create the new movie (we're passing an object with the details of the new movie)
-        this.props.addMovieHandler( {title, year, rating, imgURL} ); 
+        this.props.methodToCreateMovie( {title, year, rating, imgURL} ); 
 
         // reset form
         this.setState({

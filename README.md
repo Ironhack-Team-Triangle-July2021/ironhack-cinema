@@ -82,6 +82,7 @@ An ongoing project / codealong to learn React fundamentals.
   - In createMovie(), update state (adding the new movie to state.moviesArr)
 - 11.d: Reset the form after submit
 
+
 > Creating React forms:
 >
 > - Create the form in our JSX (HTML tags)
@@ -92,4 +93,30 @@ An ongoing project / codealong to learn React fundamentals.
 >   - Add onChange event (and update state with the new value)
 >
 > - Handle form submission
+
+
+
+### Bonus: Functionality to sort by title/rating
+
+- Task: implement two buttons to sort movies by title/rating.
+
+- Notes:
+  - This is functionality is equivalent to "Iteration 3" in the LAB "IronContacts".
+  - You can add the buttons on the component <Main /> (that will make your life easier because you wouldn't need to worry about communication between components)
+
+
+### Bonus: Search Bar
+
+- Task: implement a search bar, allowing to filter the movies to display.
+
+- Notes: 
+  - This functionality is equivalent to "Iteration 4" in the LAB "IronNutrition".
+  - Ideally, you'd create a specific component (eg. <SearchBar /> ). In that case, you'll need to deal with communication between components (when the user types something, you will need to call a method in the parent component to update the list of movies etc.)
+
+
+
+
+### Step 12: Lifting state up
+- 12.a: Add a new component `<Summary />` that needs access to the list of movies (we need to lift state up to the `<Main />` component, which is the closest common ancestor).
+  - Note: at this point, functionality to delete and add movies doesn't work.
 

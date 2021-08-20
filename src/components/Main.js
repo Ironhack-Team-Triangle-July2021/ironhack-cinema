@@ -1,13 +1,8 @@
 import React from "react";
 import AddMovie from "./AddMovie";
 import Movie from "./Movie";
-import movies from '../data/movies.json';
 
 class Main extends React.Component {
-
-    state = {
-        moviesArr: movies
-    }
 
     deleteMovie = (movieId) => {
         this.setState(prevState => {
@@ -27,7 +22,7 @@ class Main extends React.Component {
     }
 
     renderMovies() {
-        return this.state.moviesArr.map(movieObj => {
+        return this.props.listOfMovies.map(movieObj => {
             return (
                 <Movie
                     key={movieObj.id}
@@ -44,7 +39,7 @@ class Main extends React.Component {
                 <AddMovie addMovieHandler={this.createMovie} />
                 <section className="movie-container">
                     {
-                        this.state.moviesArr.length
+                        this.props.listOfMovies.length
                             ? this.renderMovies()
                             : <p className="msg-info">There are currently no movies to display</p>
                     }
